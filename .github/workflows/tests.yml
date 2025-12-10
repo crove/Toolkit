@@ -29,4 +29,4 @@ jobs:
       - name: Run tests
         working-directory: cli-taskmanager
         run: |
-          poetry run pytest -v src/cli_taskmanager/tests
+          poetry run pytest -v
