@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "cli-taskmanager"
+packages = [{ include = "cli_taskmanager", from = "src" }]
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+taskr = "cli_taskmanager.app:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {extras = ["all"], version = "^0.20.0"}
+rich = "^14.2.0"
+sqlite-utils = "^3.38"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.1"
+ruff = "^0.14.5"
+black = "^25.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+lint.extend-select = ["I"]  # Import-Sortierung
+
