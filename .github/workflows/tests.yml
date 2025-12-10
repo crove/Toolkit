@@ -23,8 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd cli-taskmanager
           poetry install
 
       - name: Run tests
         run: |
-          poetry run pytest -v
+          cd cli-taskmanager
+          poetry run pytest -v src/cli_taskmanager/tests
